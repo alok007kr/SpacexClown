@@ -1,0 +1,135 @@
+/* primary:#1E1E1E;
+   dark:#121212;
+   pure:#ffffff;
+   gray:#1d1d1d;
+   mild:#b9b8b8;  */
+
+/* Our css code starts from  here */
+
+*{
+margin:0;
+padding:0;
+-webkit-font-smoothing:antialiased;
+}
+body{
+font-family:'Montserrat',sans-serif;
+color:#ffffff;
+}
+header{
+background-image:linear-gradient(135deg, rgba(0,0,0,1),rgba(0,0,0,0.2)),
+url('./img/sunrise.jpg');
+min-height:100vh;
+background-size:cover;
+}
+header nav{
+padding:20px 40px 20px 100px;
+display:grid;
+grid-template-columns:1fr 2fr;
+align-items:center;
+border-bottom:1px solid #1d1d1d;
+}
+header nav .nav-right{
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+header nav .nav-right a{
+text-decoration:none;
+color:#ffffff;
+margin-right:2.4rem;
+position:relative;
+}
+header nav .nav-right a:after{
+content:'';
+position:absolute;
+left:0;
+bottom:-30px;
+width:0;
+height:2px;
+background:#ffffff;
+transition:width .3s ease-in-out;
+}
+header nav .nav-right a:hover:after{
+width:70%;
+}
+header nav .nav-right a.active:after{
+width:70%;
+}
+header nav .nav-right .search > div{
+background:#121212;
+display:flex;
+align-items:center;
+padding:10px 15px;
+border-radius:50px;
+}
+header nav .nav-right .search > div input{
+background:transparent;
+border:none;
+outline:none;
+font-size:16px;
+color:#ffffff;
+}
+header nav .nav-right .search > div img{
+padding-right:16px;
+}
+.social div{
+border:2px solid #ffffff;
+width:40px;
+height:40px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:30px;
+animation:moveIn 1s ease-in-out forwards;
+}
+
+0keyframes moveIn{
+from{
+transform:translateX(-100px);
+}
+to{
+transform:translateX(0px);
+}
+}
+
+.social svg path{
+fill:#ffffff;
+}
+.social  div:hover svg path{
+ fill:#121212;
+ transition: all .5s ease-in-out;
+}
+.social div:hover{
+background:#ffffff;
+}
+.cta{
+position:relative;
+}
+.social{
+position:absolute;
+left:0;
+top:0;
+border-right:1px solid #1d1d1d;
+width:100px;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+min-height:87vh;
+}
+.cta .space{
+display:flex;
+align-items:center;
+justify-content:center;
+min-height:calc(100vh-80px);
+}
+.space .right-section img{
+height:500px;
+margin-top:30px;
+}
+.left-section{
+width:650px;
+max-width:99%;
+}
+
